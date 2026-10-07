@@ -1,0 +1,107 @@
+---
+## Author
+author:
+  name: Камбунду Паулине Де Лоурдеш Бранку
+  email: 1032239159@rudn.ru
+  affiliation:
+    - name: Российский университет дружбы народов
+      country: Российская Федерация
+      postal-code: 117198
+      city: Москва
+      address: ул. Миклухо-Маклая, д. 6
+
+## Title
+title: Домашняя работа №3
+subtitle: Анализ трафика в Wireshark
+license: CC BY
+date: today
+date-format: "YYYY-MM-DD"
+---
+
+# Цели и задачи работы
+
+## Цель лабораторной работы
+
+Изучение MAC-адресации, анализ кадров канального уровня, а также исследование протоколов ARP, ICMP, HTTP, DNS, TCP, UDP и процесса TCP handshake с помощью Wireshark.
+
+# Процесс выполнения лабораторной работы
+
+## Просматриваю сетевую конфигурацию
+
+![Просмотр основной сетевой конфигурации с помощью команды ipconfig](image/01.png){ #fig:001 width=70% height=70% }
+
+## Определяю MAC-адреса интерфейсов
+
+![Получение расширенной сетевой конфигурации и MAC-адресов с помощью ipconfig /all](image/02.png){ #fig:002 width=70% height=70% }
+
+## Проверяю доступность шлюза
+
+![Проверка доступности шлюза по умолчанию с помощью ping](image/03.png){ #fig:003 width=70% height=70% }
+
+## Анализирую ICMP Echo Request
+
+![Анализ ICMP Echo Request к шлюзу в Wireshark](image/04.png){ #fig:004 width=70% height=70% }
+
+## Анализирую ICMP Echo Reply
+
+![Анализ ICMP Echo Reply от шлюза в Wireshark](image/05.png){ #fig:005 width=70% height=70% }
+
+## Изучаю ARP-запрос
+
+![Анализ ARP-запроса в Wireshark](image/06.png){ #fig:006 width=70% height=70% }
+
+## Изучаю ARP-ответ
+
+![Анализ ARP-ответа в Wireshark](image/07.png){ #fig:007 width=70% height=70% }
+
+## Проверяю доступность удалённого узла
+
+![Проверка доступности yandex.ru с помощью команды ping](image/08.png){ #fig:008 width=70% height=70% }
+
+## Анализирую ICMP-запрос к удалённому узлу
+
+![Анализ ICMP Echo Request к удалённому узлу](image/09.png){ #fig:009 width=70% height=70% }
+
+## Анализирую ICMP-ответ от удалённого узла
+
+![Анализ ICMP Echo Reply от удалённого узла](image/10.png){ #fig:010 width=70% height=70% }
+
+## Исследую HTTP-запрос
+
+![Анализ HTTP-запроса и TCP-заголовка в Wireshark](image/11.png){ #fig:011 width=70% height=70% }
+
+## Исследую HTTP-ответ
+
+![Анализ HTTP-ответа 200 OK и TCP-заголовка](image/12.png){ #fig:012 width=70% height=70% }
+
+## Анализирую DNS-запрос
+
+![Анализ DNS-запроса, передаваемого по UDP](image/13.png){ #fig:013 width=70% height=70% }
+
+## Анализирую DNS-ответ
+
+![Анализ DNS-ответа, передаваемого по UDP](image/14.png){ #fig:014 width=70% height=70% }
+
+## Проверяю наличие QUIC-трафика
+
+![Результат применения фильтра quic в Wireshark](image/15.png){ #fig:015 width=70% height=70% }
+
+## Анализирую TLS-трафик
+
+![Анализ TLS-трафика при отсутствии пакетов QUIC](image/16.png){ #fig:016 width=70% height=70% }
+
+## Изучаю TCP handshake
+
+![Анализ трёхэтапного TCP handshake в Wireshark](image/17.png){ #fig:017 width=70% height=70% }
+
+## Строю график потока TCP
+
+![График потока TCP-соединений и анализ TCP handshake](image/18.png){ #fig:018 width=70% height=70% }
+
+# Выводы по проделанной работе
+
+## Вывод
+
+В ходе лабораторной работы была изучена сетевая конфигурация компьютера, определены IP- и MAC-адреса сетевых интерфейсов, а также рассмотрена структура MAC-адресов.
+
+С помощью Wireshark был выполнен захват и анализ кадров ARP и ICMP, исследованы HTTP- и DNS-запросы, особенности передачи данных по TCP и UDP, а также рассмотрен процесс установления TCP-соединения через последовательность `SYN → SYN, ACK → ACK`.
